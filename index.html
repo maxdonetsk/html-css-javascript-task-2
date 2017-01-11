@@ -9,20 +9,42 @@
     <body>
         <div class="container-fluid">
             <div class="row row-offcanvas row-offcanvas-left">
-                <div class="sidebar-offcanvas" id="sidebar">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            Panel is so empty... Use that attractive form at the right and add some elements!
-                        </div>
-                    </div>
+                <div class="sidebar-offcanvas well" id="sidebar">
+                    <p id="message-on-empty">
+                        Panel is so empty... Use that attractive form at the right and add some elements!
+                    </p>
+                    <div id="results"></div>
                 </div>
-                <button type="button" class="btn btn-success" data-toggle="offcanvas" id="sidebar-button">
-                    <i class="glyphicon glyphicon-menu-hamburger"></i>
-                </button>
-                &larr; Press here and you will get an awesome left panel!
+                <div>
+                    <button type="button" class="btn btn-success" data-toggle="offcanvas" id="sidebar-button">
+                        <i class="glyphicon glyphicon-menu-hamburger"></i>
+                    </button>
+                </div>
 
                 <div class="col-xs-12 col-md-6 col-md-offset-3">
-                    123
+                    <form name="add-element-form" id="add-element-form">
+                        <div class="form-group">
+                            <label for="input-type">I wanna add an awesome</label>
+                            <select class="form-control input-sm"
+                                    id="input-type"
+                                    name="input-type">
+                                <option value="checkbox">checkbox</option>
+                                <option value="button">button</option>
+                                <option value="select">select</option>
+                            </select>
+                            <label for="input-type">to the left panel.</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-name">Let's name it</label>
+                            <input type="text"
+                                   class="form-control input-sm"
+                                   id="input-name"
+                                   name="input-name"
+                                   required />
+                            <label for="input-name">.</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Yarrrrr!</button>
+                    </form>
                 </div>
             </div>
         </div>
