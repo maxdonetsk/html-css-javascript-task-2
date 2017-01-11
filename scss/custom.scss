@@ -1,0 +1,42 @@
+/*
+Write custom rules here ONLY!
+*/
+
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_mixins.scss";
+@import "variables.scss";
+@import "mixins.scss";
+
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.row-offcanvas {
+    @include prefix((transition: left .25s ease-out));
+    position: relative;
+}
+
+.row-offcanvas-left {
+    left: 0;
+
+    &.active {
+        left: $panel-width;
+    }
+
+    .sidebar-offcanvas {
+        @include prefix((box-shadow:  0 0 $panel-shadow-size rgba(black, 0.5)));
+        width: $panel-width;
+        left: (-$panel-width);
+        top: 0;
+        position: absolute;
+        min-height: 100vh;
+    }
+}
+
+#sidebar-button {
+    position: relative;
+    z-index: 10;
+}
